@@ -1,3 +1,33 @@
+"""
+    Simplified pattern construction for basic matching
+
+    Usage:
+
+        import simplex
+
+        pattern = "Hello, [name]"
+        compiled = simplex.compile(pattern)
+
+        # compiled is now a regular regexp
+        string = "Hello, jack and jill and world!"
+
+        match = regex.match(message)
+        fields = match.groupdict()
+
+        print(fields['name'])  # prints "jack and jill and world!"
+
+
+    A more complex example with references:
+
+           "<[tag]>[value]</[:ref(tag)]>"
+
+            <[tag]>       [value]    </[:ref(tag)]>
+                |             |            |
+                V             V            V
+        ^<(?P<tag>.*?)>(?P<value>.*?)</(?P=tag)>$
+
+"""
+
 import re
 
 

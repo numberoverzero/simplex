@@ -1,4 +1,4 @@
-# simplex 0.1.0
+# simplex 0.1.1
 
 Downloads https://pypi.python.org/pypi/simplex
 
@@ -19,7 +19,7 @@ pattern = "Hello, [name]"
 compiled = simplex.compile(pattern)
 
 # compiled is now a regular regexp
-string = "Hello, jac and jill and world!"
+string = "Hello, jack and jill and world!"
 match = regex.match(message)
 fields = match.groupdict()
 print(fields['name'])

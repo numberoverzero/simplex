@@ -1,4 +1,4 @@
-# simplex 0.1.1
+# simplex 0.1.2
 
 Downloads https://pypi.python.org/pypi/simplex
 

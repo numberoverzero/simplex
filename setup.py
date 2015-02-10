@@ -1,6 +1,6 @@
 """ Setup file """
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(HERE, 'README.markdown')).read()
@@ -19,7 +19,7 @@ TEST_REQUIREMENTS = [
 if __name__ == "__main__":
     setup(
         name='simplex',
-        version='0.1.1',
+        version='0.1.2',
         description="simple subset of regex",
         long_description=README,
         classifiers=[
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         keywords='re regex regexp',
         platforms='any',
         include_package_data=True,
-        packages=find_packages(exclude=('tests',)),
+        py_modules=['simplex'],
         install_requires=REQUIREMENTS,
         tests_require=REQUIREMENTS + TEST_REQUIREMENTS,
     )

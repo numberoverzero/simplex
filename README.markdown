@@ -15,14 +15,24 @@ simple subset of regex that 'compiles' to python regexs
 ```python
 import simplex
 
-pattern = "Hello, [name]"
-compiled = simplex.compile(pattern)
+pattern = "Hello, [name] (aka [nick])!"
+regex = simplex.compile(pattern)
 
-# compiled is now a regular regexp
-string = "Hello, jack and jill and world!"
-match = regex.match(message)
-fields = match.groupdict()
-print(fields['name'])
+string = "Hello, earth (aka world)!"
+match = regex.match(string)
+print(match.groupdict())
+
+```
+
+```python
+import simplex
+
+pattern = "<[el]>[value]</[:ref(el)]>"
+regex = simplex.compile(pattern)
+
+string = "<h1>Hello, World!</h1>"
+match = regex.match(string)
+print(match.groupdict())
 
 ```
 
